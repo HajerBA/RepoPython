@@ -1,5 +1,17 @@
-L=[65, 31, 9, 32, 81, 82, 46, 12,2,36,9,21,1,16,14]
-print(L)
-x=L.sort()
-print(L)
-print(x)
+import random
+def tri_insertion(L):
+    N = len(L)
+    for n in range(1,N):
+        cle = L[n]
+        j = n-1
+        while j>=0 and L[j] > cle:
+            L[j+1] = L[j] 
+            j = j-1
+        L[j+1] = cle
+
+liste = []
+for k in range(10):
+    liste.append(random.randint(0,20))
+tri_insertion(liste)
+                      
+print(liste)
